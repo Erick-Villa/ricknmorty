@@ -23,13 +23,10 @@ function App() {
       <header className="App-header">
         <img src={viteLogo} className="App-logo" alt="logo" />
         <img src={reactLogo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR updates.
-        </p>
         <button onClick={getCharacters}>Get Characters</button>
         <ul>
           {characters.map((character) => (
-            <li key={character.id}>{character.name} <img src={character.image} alt="" /></li>
+            <li key={character.id}>Name: {character.name}<br/>Status: {character.status}<br/>Species: {character.species}<br/>Gender: {character.gender}<hr /><img src={character.image} alt="" /></li>
           ))}
         </ul>
       </header>
